@@ -1,0 +1,44 @@
+<html>
+    <head>
+    <title>Mood Media Project Request System</title>
+        <link rel="stylesheet" type="text/css" href="style.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    </head>
+    <body style="margin:0;">
+        <center>
+            <div style="width:100%;background-image: url(img/bannerbg.jpg)">
+                <img src="img/requestlogo.png" style="width:90%;max-width:500px;padding:45px 10px;" />
+            </div>
+            
+        <p style="max-width: 650px;padding:10px;border: 1px solid #cd102f;">This request system is still in development so please report errors (take screenshots if possible) and send them to Brandon Orndorff at <a href="mailto:brandon.orndorff@moodmedia.com">brandon.orndorff@moodmedia.com</a></p>
+        <p>
+        
+        <h3>STEP 1: Choose a Request Type</h3>
+        <form>
+            <select id="requesttype" name="requesttype"><option value="">Choose Request Type</option><option value="marketing">Marketing</option><option value="music">Music</option><option value="messaging">Messaging</option><option value="visual">Visual</option></select><br />
+        </form>
+            
+        <h3>STEP 2: Choose a Department</h3>
+        <form>
+        <select id="choosedepartment" name="department"><option value="">Choose Department</option><option value="local sales">Local Sales</option><option value="strategic sales">Strategic Sales</option><option value="idsr">IDSR</option><option value="premier sales">Premier Sales/Account Development</option><option value="hr">HR</option><option value="international">International</option><option value="other">Other</option></select>
+        </form>
+
+        <h3>STEP 3: Form Will Populate Based on Step 1&2</h3>
+        <!-- HIDDEN DIVS UNLESS SELECTED -->
+        <div id="marketing" style="display:none;max-width:650px;" w3-include-html="form-marketing.html"></div>
+        <div id="music" style="display:none;max-width:650px;" w3-include-html="form-music.html"></div>
+        <div id="messaging" style="display:none;max-width:650px;" w3-include-html="form-messaging.html"></div>
+        <div id="visual" style="display:none;max-width:650px;" w3-include-html="form-visual.html"></div>
+        <!-- / HIDDEN DIVS UNLESS SELECTED -->
+        
+        </center>
+    <script src="script.js"></script>
+    <script>
+        includeHTML();
+    </script>
+    
+        <br /><br /><br />
+    <div id="footer"></div>
+    
+    </body>
+</html>
